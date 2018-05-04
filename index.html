@@ -1,19 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Pomodoro Clock</title>
-	<link rel="stylesheet" type="text/css" href="/home/david-boc/Documents/pomodoro /pomodorostyle.css">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Pomodoro Clock</title>
+  <meta name="description" content="Pomodoro Clock">
+  <meta name="author" content="Dr-D-M and usmanakhter">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/pomodorostyle.css">
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
 </head>
+
 <body>
-	<div class="container">
-		<h1>Pomodoro Clock</h1>
-		<div class="top">
-			<div class="clock"></div>
+	<h1>Pomodoro Clock</h1>
+	<div class="container blackbox">
+		<div class="row">
+			<div class="six columns">Session</div>
+			<div class="six columns">Break</div>
 		</div>
-		<div class="timer">
-			<div class="clock"></div>
+
+		<div class="row">
+			<div class="six columns">
+				<button class="button-primary updown">Down</button>
+				<div id="session" class="updown">25</div>
+				<button class="button-primary updown">Up</button>
+			</div>
+			<div class="six columns">
+				<button class="button-primary updown">Down</button>
+				<div id="break" class="updown">5</div>
+				<button class="button-primary updown">Up</button>
+			</div>
 		</div>
 	</div>
 
+	<div class="container blackbox">
+		<div class="row">
+			<div class="six columns">
+				<button class="button-primary">Play</button>
+			</div>
+			<div class="six columns">
+				<button class="button-primary">Refresh</button>
+			</div>
+		</div>
+
+		<div class="row">Session</div>
+
+		<div class="row">25:00</div>
+
+		<div class="row">
+			<div class="six columns">
+				<button class="button-primary">Pause</button>
+			</div>
+			<div class="six columns">
+				<button class="button-primary">Stop</button>
+			</div>			
+		</div>
+	</div>
+
+
+
+
+<script src="js/pomodorofunction.js"></script>
+
 </body>
+
 </html>
