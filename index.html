@@ -15,7 +15,6 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -26,6 +25,12 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!--jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+
 
 </head>
 
@@ -54,16 +59,16 @@
 	<div class="container blackbox">
 		<div class="row">
 			<div class="six columns">
-				<button class="button-primary">Play</button>
+				<button id="play" class="button-primary">Play</button>
 			</div>
 			<div class="six columns">
 				<button class="button-primary">Refresh</button>
 			</div>
 		</div>
 
-		<div class="row">Session</div>
+		<div class="row">Session Time ... Work!</div>
 
-		<div class="row">25:00</div>
+		<div id='theTimer' class="row">25:00</div>
 
 		<div class="row">
 			<div class="six columns">

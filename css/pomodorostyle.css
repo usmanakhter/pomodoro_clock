@@ -3,41 +3,6 @@ body{
 	text-align: center;
 }
 
-/* style for inner charts */
-
-.top{
-	width: 450px;
-	height: 200px;
-	border: 1px solid black;
-	margin: 0 auto;
-	padding: 0;
-	margin-top: 25px;
-	float: left;
-	position: relative;
-	left: 185px;
-}
-.timer{
-	width: 450px;
-	height: 200px;
-	border: 1px solid black;
-	margin: 0 auto;
-	padding: 0;
-	margin-top: 25px;
-	float: right;
-	position: relative;
-	right: 185px;
-}
-
-/*inner chart style*/
-.clock{
-	width: 150px;
-	height: 150px;
-	border: 1px solid green;
-	margin: 0 auto;
-	padding: 0;
-	margin-top: 20px;
-}
-
 h1{
 	text-align: center;
 	color: #;
@@ -54,5 +19,10 @@ h1{
 	margin-bottom:2%;
 	color:#EEE0E5;
 	background-color:black;
+}
+
+#theTimer{
+	font-size: 10vh;
+	margin-bottom: 5vh;
 }
 
