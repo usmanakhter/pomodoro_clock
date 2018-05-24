@@ -95,13 +95,15 @@ function refresher(){
 	breakDuration=300;
 	userEditedBreakDuration=breakDuration;
 	breakShow.textContent= secToMin(userEditedBreakDuration);
-	timer.textContent = secToMin(sessionDuration);
+	timer.textContent = secToMin(userEditedSessionDuration);
 	mode.textContent = "Refreshed"
+	$("#play").one("click", player);
 }
 
 function pauser(){
 	clearInterval(timerInterval);
 	mode.textContent = "Paused"
+	$("#play").one("click", player);
 }
 
 function stopper(){
@@ -110,6 +112,7 @@ function stopper(){
 	breakDuration=userEditedBreakDuration;
 	timer.textContent = secToMin(sessionDuration);
 	mode.textContent = "Stopped"
+	$("#play").one("click", player);
 }
 
 sessionDown.addEventListener("click", timerSettings);
@@ -117,12 +120,9 @@ sessionUp.addEventListener("click", timerSettings);
 breakDown.addEventListener("click", timerSettings);
 breakUp.addEventListener("click", timerSettings);
 
-play.addEventListener("click", player);
+$("#play").one("click", player);
 refresh.addEventListener("click", refresher);
 pause.addEventListener("click", pauser);
 stop.addEventListener("click", stopper);
-
-
-
 
 });
