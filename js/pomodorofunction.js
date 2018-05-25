@@ -86,6 +86,7 @@ var timerInterval;
 function player(){
 	timerInterval = setInterval(together, 1000);
 }
+var playerOn=true;
 
 function refresher(){
 	clearInterval(timerInterval);
@@ -96,14 +97,14 @@ function refresher(){
 	userEditedBreakDuration=breakDuration;
 	breakShow.textContent= secToMin(userEditedBreakDuration);
 	timer.textContent = secToMin(userEditedSessionDuration);
-	mode.textContent = "Refreshed"
-	$("#play").one("click", player);
+	mode.textContent = "Refreshed";
+	playerOn=true;
 }
 
 function pauser(){
 	clearInterval(timerInterval);
-	mode.textContent = "Paused"
-	$("#play").one("click", player);
+	mode.textContent = "Paused";
+	playerOn=true;
 }
 
 function stopper(){
@@ -111,8 +112,8 @@ function stopper(){
 	sessionDuration=userEditedSessionDuration;
 	breakDuration=userEditedBreakDuration;
 	timer.textContent = secToMin(sessionDuration);
-	mode.textContent = "Stopped"
-	$("#play").one("click", player);
+	mode.textContent = "Stopped";
+	playerOn=true;
 }
 
 sessionDown.addEventListener("click", timerSettings);
@@ -120,7 +121,16 @@ sessionUp.addEventListener("click", timerSettings);
 breakDown.addEventListener("click", timerSettings);
 breakUp.addEventListener("click", timerSettings);
 
-$("#play").one("click", player);
+function checkPlayer(){
+	if (playerOn==true){
+		player();
+	}
+}
+$("#play").on("click", function(){
+	checkPlayer();
+	playerOn=false;
+});
+
 refresh.addEventListener("click", refresher);
 pause.addEventListener("click", pauser);
 stop.addEventListener("click", stopper);
